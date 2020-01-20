@@ -39,5 +39,13 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script>                                                        
+    /* este script permite el uso de selects usando el framework 
+    materialize*/
+      document.addEventListener('DOMContentLoaded', function() {
+          var elements = document.querySelectorAll('select');
+          M.FormSelect.init(elements);
+      });
+    </script>
   </body>
 </html>

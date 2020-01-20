@@ -1,22 +1,15 @@
 html {
   height: 100%;
 }
+
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Lato', sans-serif;
-  background-color: #e5e5e5;
-  min-height: 100%;
+  font-family: sans-serif;
 }
 
-header {
-  background-color: #ec3a49;
-  color: white;
-  padding: 5rem 0;
-}
-h1 {
-  color: white;
-  font-weight: 900;
+body {
+  background-color: #039be5;
 }
 .card-content h3 {
   font-size: 1.4rem;
@@ -43,7 +36,9 @@ h1 {
 .dropdown-content li>span {
   color: black;
 }
-
+.select-wrapper input.select-dropdown:focus {
+  border-bottom: 1px solid #e64a19!important;
+}
 h1 {
   color: white;
   font-weight: 900;
@@ -83,10 +78,4 @@ h2 {
   opacity: 0;
   transition: all .5s ease-in;
   transform: scale(1);
-}
-
-/* clase modificada para poder separar los componentes Formulario
-y Eventos */
-#evento{
-  margin-top: 3cm; 
 }

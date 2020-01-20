@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component, Fragment } from 'react';
+import Header from './Components/Header'
+import {EventosProvider} from './context/EventosProvider'
+import {CategoriasProvider} from './context/CategoriasProvider.js'
+import Formulario from './Components/Formulario'
+import Eventos from './Components/Eventos'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import 'materialize-css'; 
+import 'materialize-css/dist/css/materialize.min.css';
+
+class App extends Component {
+  render(){
+    return (
+      <Fragment>
+        <Header/>
+        <EventosProvider>{/*Context que extrae los eventos de la 
+        api */} 
+          <CategoriasProvider> {/* Context que extrae las categorias
+          la api*/}
+            <div className='container'>
+              <Formulario/>{/* Componente que contiene el formulario
+              de la busqueda */}
+              <Eventos/> {/* Componente que manipula los eventos */}
+            </div>            
+          </CategoriasProvider>
+        </EventosProvider>            
+      </Fragment>
+    )
+  }
 }
+
+
 
 export default App;
