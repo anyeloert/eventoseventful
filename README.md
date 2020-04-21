@@ -1,3 +1,7 @@
+Tecnologías utilizadas:
+-Materialize
+-Axios
+
 Link proyecto= https://nostalgic-wiles-4115af.netlify.com
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
